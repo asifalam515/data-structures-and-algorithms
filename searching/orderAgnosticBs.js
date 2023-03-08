@@ -2,13 +2,8 @@ function orderAgnosticBinarySearch(arr,target){
   var start=0;
  var end=arr.length-1;  
 // find whether the array is sorted in ascending or descending
-var isAscending;
-if(arr[start]<arr[end]){
-    isAscending=true;
-    
-} else{
-    isAscending=false;
-}
+var isAscending=arr[start]<arr[end]
+
 while(start<=end){
     var mid=Math.floor((start+(end-start)/2));
     if(arr[mid]===target){
@@ -36,6 +31,6 @@ while(start<=end){
 return -1;
 }
 
-const arr=[12,7,7,6,5,2,1]
-const target=15;
+const arr=[10,11,12,14,15,16,17]
+const target=17;
 console.log(orderAgnosticBinarySearch(arr,target))
